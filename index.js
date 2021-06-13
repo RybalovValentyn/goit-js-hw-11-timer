@@ -13,9 +13,9 @@ class CountdownTimer {
     }
     
 start(){
-    console.log(refSecondsValue);
-    console.log('dzfbd',this.selector);
-    console.log('khvkv',this.targetDate);
+    // console.log(refSecondsValue);
+    // console.log('dzfbd',this.selector);
+    // console.log('khvkv',this.targetDate);
 
     this.intervalId = setInterval(() => {
         const deltaTime = Date.parse(this.targetDate) - Date.parse(new Date());
@@ -57,5 +57,5 @@ updateClockface({days, hours, mins, secs }) {
 
  new CountdownTimer({
         selector: '#timer-1',
-        targetDate: new Date('20:35 Jun 13, 2021'),
+        targetDate: new Date('Jul 17, 2021'),
       });
