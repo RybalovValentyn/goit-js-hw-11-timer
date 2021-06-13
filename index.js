@@ -43,7 +43,7 @@ initializeClock(selector) {
     const refSecondsValue = clock.querySelector('[data-value="secs"]');
 };
 updateClockface({days, hours, mins, secs }) {
-    if (secs < 1) {
+    if (secs < 1 && mins < 1 && hours < 1 && days < 1) {
         console.log('End Time');
         clearInterval(this.intervalId);
     }
@@ -57,5 +57,6 @@ updateClockface({days, hours, mins, secs }) {
 
  new CountdownTimer({
         selector: '#timer-1',
-        targetDate: new Date('Jul 17, 2021'),
+        targetDate: new Date('Jul 17, 2022'),
+        // targetDate: new Date('20:47 Jun 13, 2021'),
       });
